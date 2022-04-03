@@ -1,0 +1,1193 @@
+/*  FONTS  */
+/* Roboto 500  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/*  Montserrat 500  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@500&display=swap');
+/* Ubuntu 400  */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+html {
+    max-width: 100vw!important;
+    width: 100vw!important;
+    overflow-x: hidden;
+}
+* {
+	box-sizing: border-box;
+    margin: 0;
+}
+body {
+    scroll-behavior: smooth!important;
+    max-width: 100%;
+    width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0;
+    overflow-x: hidden;
+}
+.clr {
+	clear: both;
+}
+.col-md-6, .col-sm-3, .col-sm-9, .col-sm-4, .col-md-4, .col-md-7, .col-md-5  {
+    float: left;
+}
+
+/*  NAVBAR */
+#nav {
+    width: 100%;
+    height: 100px;
+	background: #fff!important;
+	color: #333!important;
+	font-family: Montserrat, sans-serif;
+    border-radius: 50px;
+    margin: 30px auto;
+    box-shadow: 10px 10px 20px rgba( 0, 0, 0, .1 );
+}
+#logo-pic {
+    width: 200px;
+    margin: auto 20px;
+}
+.nav-link {
+    font-size: 19px;
+    line-height: 23px;
+    font-family: 'Roboto', sans-serif;
+	color: #333!important;
+	margin: 0px; 
+	transition: 0.3s ease;
+}
+.nav-link-red {
+    color: #DE0654!important;
+}
+.nav-link:hover {
+    color: #DE0654!important;
+}
+.navbarBtn {
+    color: #fff!important;
+    background: #fff;
+	transition: 0.3s ease;
+	font-size: 18px;
+    padding: 7px 14px;
+    border-radius: 5px;
+	border: none!important;
+}
+.navbarBtn:hover {
+	background: #e8f0f3ab;
+}
+.navbarBtn:focus {
+	outline: none!important;
+    background: transparent;
+    border: 1px solid #DE0654!important;
+}
+/*  NAVBAR End */
+
+.bg-callCard-1, .bg-callCard-2 {
+    display: none;
+    margin: 0 auto;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    transition: transform 1s ease;
+    transform: scale(.5),
+               translateY(0);
+}
+.bg-callCard-1.show, .bg-callCard-2.show {
+    transform: translateY(-50%);
+    transform: scale(1);
+    display: inline-block;
+}
+.bg-callCard-1.hide, .bg-callCard-2.hide {
+    animation: fadeOut .5s;
+    animation-fill-mode: forwards;
+    -webkit-animation: fadeOut .5s;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation: fadeOut .5s;
+    -o-animation-fill-mode: forwards;
+    -moz-animation: fadeOut .5s;
+    -moz-animation-fill-mode: forwards;
+}
+.card-note {
+    display: none;
+    bottom: 50px;
+    margin: 0 auto;
+    position: fixed;
+    background-color: #ffffffb6;
+    height: 50px;
+    z-index: 9999;
+    transition: transform 1s ease;
+    transform: scale(.5),
+               translateY(0);
+}
+.card-note.visible {
+    transform: translateY(-50%);
+    transform: scale(1);
+    display: inline-block;
+    animation: noteFadeOut 3s;
+    animation-fill-mode: forwards;
+    -webkit-animation: noteFadeOut 3s;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation: noteFadeOut 3s;
+    -o-animation-fill-mode: forwards;
+    -moz-animation: noteFadeOut 3s;
+    -moz-animation-fill-mode: forwards;
+}
+.fa-times {
+    font-size: 40px;
+    color: #FE4D4D;
+    background-color: #fff;
+    padding: 10px 17px;
+    border-radius: 50%;
+    margin: -14px -595px 0 0;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.fa-times:hover {
+    background-color: #FE4D4D;
+    color: #fff;
+}
+@keyframes noteFadeOut{
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    93%{
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+@-webkit-keyframes noteFadeOut {
+
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    93%{
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+@keyframes fadeOut{
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+@-webkit-keyframes fadeOut{
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.call-card {
+    width: 630px;
+    background: #fff;
+    border-radius: 50px;
+    display: flex;
+    margin: 20vh auto 0;
+    transition: .3s ease;
+}
+.call-card > .container > h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 32px;
+    line-height: 32px;
+    margin: 25px auto 40px;
+}
+.second-h4 { /* 2nd h4 on pop-up box at skidka*/
+    margin: -20px 110px 25px!important;
+}
+.input-call {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 31px 33px;
+    width: 90%;
+    margin: 0 auto;
+    background: #F4F4F4;
+    color: #5c5c5c;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: .3s ease;
+}
+.input-call::placeholder {
+    color: #BEBEBE;
+}
+.input-call:hover {
+    background: #e4e2e2;
+}
+.input-call:focus {
+    background: #dad1d1;
+}
+.btn-call, #skidkaPopupBtn {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    padding: 27px;
+    border: 1px solid #FE4D4D;
+    outline: none;
+    width: 90%;
+    margin: 20px auto 50px!important;
+    background: #FE4D4D;
+    color: #fff;
+    transition: .3s ease;
+}
+.btn-call:hover, #skidkaPopupBtn:hover {
+    background: #fff;
+    color: #FE4D4D;
+}
+.btn-call:focus, #skidkaPopupBtn:focus {
+    background: #e92929;
+}
+
+/* --  HOME SECTION  -- */
+.home {
+    margin: 80px 0;
+}
+h1 {
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #424242;
+    letter-spacing: 0.04em;
+    margin: 40px 0 50px;
+    padding-left: 0;
+}
+.home-ul {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    list-style-image: url(../img/Ellipse\ 73.png);
+    margin: 13px 20px;
+    padding-left: 0;
+}
+.home-ul > li {
+    color: #424242;
+    padding: 10px 20px;
+    line-height: 28px;
+    letter-spacing: .04em;
+}
+.homeBtn {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: #fff;
+    background: linear-gradient(90deg, #D70652 0%, #FF025E 100%);
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid #FF025E;
+    padding: 13px 45px;
+    margin: 30px auto 40px;
+    transition: 0.3s ease!important;
+}
+.homeBtn:hover {
+    background: transparent;
+    color: #FF025E;
+}
+.p-skidka {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: #333;
+}
+.link-skidka {
+    color: #006eff;
+    cursor: pointer;
+}
+.link-skidka:hover {
+    color: #0052bd;
+    text-decoration: underline;
+}
+#home-pic {
+    width: 108%;
+    margin: 40px 0 0 -40px;
+}
+.home-card {
+    position: absolute;
+    width: 35%;
+    right: 0;
+    background: #FE4D4D;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.col-sm-9 p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 300;
+    color: #fff;
+    padding: 20px 50px 10px 0;
+}
+b {
+    font-weight: 700!important;
+}
+.col-sm-3 img {
+    width: 70px;
+    display: flex;
+    margin: 30px auto;
+} /* Mobile card */
+.mobile-card {
+    display: none;
+}
+
+/* --  HOME SECTION END  -- */
+
+/* --  PRICE SECTION  -- */
+.price {
+    margin: 60px 0 ;
+}
+.price > .container > h3 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: .04em;
+    margin: 0 0 30px;
+}
+.card-line {
+    background: #f3f3f3;
+    height: 60px;
+    width: 90%;
+    margin: 15px auto;
+}
+.card-line p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    display: inline-flex;
+    color: #747474;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 15px 0 15px 15px;
+}
+.p-price {
+    justify-content: flex-end;
+    float: right;
+    font-weight: 700!important;
+    margin: 15px 15px 15px 0!important;
+}
+
+.call-icon {
+    float: right;
+    margin: 20px;
+}
+/* --  PRICE SECTION END  -- */
+
+/* --  Our Business Section  -- */
+.business-card {
+    width: 90%;
+    height: 370px;
+    margin: 50px auto;
+    box-shadow: 10px 10px 40px rgba( 0, 0, 0, .1 );
+}
+.business-card > .container > img {
+    margin: 30px auto 20px;
+}
+.truck-img {
+    margin: 30px auto 5px!important;
+}
+.business-card > .container > h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    line-height: 34px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    margin: 0 20px 25px;
+}
+.business-card > .container > p {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: .04em;
+    margin: 10px 30px;
+}
+
+/*  be with Us Part  */
+.withUsPart {
+    width: 100%;
+    height: 550px;
+    background: #fafafa;
+    margin: 50px 0;
+}
+.withUsPart > .container > h3 {
+    text-align: center;
+    font-size: 40px;
+    line-height: 46px;
+    letter-spacing: .04em;
+    font-weight: 600;
+    color: #333;
+    padding: 100px 0 40px;
+}
+.col-md-4 > p {
+    font-size: 25px;
+    line-height: 29px;
+    font-weight: 600;
+    margin: 20px 0 0;
+}
+
+/* --  Our Business Section End  -- */
+
+/* --  COMMENTS SECTION  -- */
+.comments { 
+    background: #fff;
+    padding-bottom: 30px;
+}
+.comments h3 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 46px;
+    letter-spacing: .04em;
+    color: #333;
+    margin: 10px 0 0;
+}
+.comment-card {
+    width: 70%;
+    background: #DE0654;
+    margin: 70px auto 80px;
+    padding: 0 0 .1px;
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+.comment-card > img {
+    margin: -5%;
+    width: 166px;
+    height: 166px;
+    border-radius: 50%;
+}
+.comment-card > .container > h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    line-height: 25.3px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    padding: 0;
+    margin: -20px 0 0;
+}
+.comment-card > .container > p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: .04em;
+    margin: 50px 80px;
+}
+.carousel-indicators > button[type=button] {
+    outline: none;
+    width: 50px;
+    height: 5px;
+    margin: 0 15px;
+    border-radius: 5px;
+}
+.carousel-indicators [data-bs-target] {
+    background-color: #3F678C !important;
+    opacity: .3 !important;
+}
+.carousel-indicators [data-bs-target].active {
+    opacity: 1 !important;
+}
+
+
+/* --  COMMENTS SECTION END  -- */
+
+/* --  Subfooter SECTION  -- */
+.subfooter {
+    height: 400px;
+    background: #fafafa;
+}
+.subfooter > .container > h4 {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 70px 0 30px;
+}
+.subfooter > .container > img {
+    padding: 8px 23px;
+}
+/* --  Subfooter SECTION End  -- */
+
+/* --  FOOTER  -- */
+.footer {
+    height: 400px;
+    background: url(../img/van-traveling-city-260nw-1113382850\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+
+}
+.footer-card {
+    height: 400px;
+    max-width: 75%;
+    width: 70%;
+    color: #fff;
+    background: linear-gradient(94deg, #DE0654 8%, #DE0654 28%, #DE0654 57%, rgba(222, 6, 84, 0) 97%);
+    margin: 0;
+}
+.footer-card > .container > h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: .04em;
+    margin: 50px 10px 20px 5%;
+}
+.footer-card > .container > p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    line-height: 28.75px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    width: 57%;
+    margin: 30px auto 30px 5%;
+}
+
+.footer-form > input[type="tel"] {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 20.7px;
+    font-weight: 400;
+    letter-spacing: .04em;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    padding: 12px 15px;
+    border: 1px solid #fff;
+    margin: 0 -5px 20px 5%;
+    transition: .3s ease;
+}
+.footer-form > input[type="tel"]:hover {
+    background: #fa2472;
+}
+.footer-form > input[type="tel"]::placeholder {
+    color: #fff;
+}
+
+.footer-form > input[type="submit"] {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 20.7px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    background: #fff;
+    color: #DE0654;
+    padding: 12px 22px;
+    border: 1px solid #fff;
+    transition: .3s ease;
+}
+
+.footer-form > input[type="submit"]:hover {
+    background: transparent;
+    color: #fff;
+}
+.last-p {
+    font-size: 10px!important;
+    line-height: 11.5px!important;
+}
+
+
+/*  ---  RESPONSIVE  --- */
+
+/*   NETBOOKS  */
+@media only screen and (max-width: 1199px) {
+    /*  NAVBAR */
+    #nav {
+        height: 90px;
+    }
+    #logo-pic {
+        width: 180px;
+        margin: auto 0;
+    }
+    .nav-link {
+        font-size: 15.959px;
+        line-height: 20px;
+    }  
+    
+    /* --  HOME SECTION  -- */
+    h1 {
+        font-size: 38px;
+        margin: 0 0 50px;
+    }
+    .home-ul {
+        font-size: 20px;
+        margin: 10px 20px;
+    }
+    .home-ul > li {
+        padding: 8px 15px;
+        line-height: 24px;
+    }
+    #homeBtn {
+        font-size: 20px;
+        padding: 10px 30px;
+        margin: 20px auto 30px;
+    }
+    .p-skidka {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    #home-pic {
+        margin: 5px 0 0 -30px;
+    }
+    .home-card {
+        width: 30%;
+    }
+    .col-sm-9 p {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 15px 30px 5px 0;
+    }
+    .col-sm-3 img {
+        width: 50px;
+        margin: 40px auto;
+    }
+    /* --  HOME SECTION END  -- */
+    
+    /* --  PRICE SECTION  -- */
+    .price > .container > h3 {
+        font-size: 33px;
+        margin: 0 0 30px;
+    }
+    .card-line {
+        height: 50px;
+        width: 96%;
+        margin: 13px auto;
+    }
+    .card-line p {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 15px 0 15px 15px;
+    }
+    /* --  PRICE SECTION END  -- */
+
+    /* --  Our Business Section  -- */
+    .business-card {
+        height: 270px;
+        margin: 40px auto;
+    }
+    .business-card > .container > img {
+        margin: 20px auto 15px;
+        width: 59px;
+    }
+    .truck-img {
+        margin: 20px auto 0px!important;
+        width: 73px!important;
+    }
+    .business-card > .container > h4 {
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0 15px 15px;
+    }
+    .business-card > .container > p {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        margin: 10px 20px;
+    }
+
+    /*  be with Us Part  */
+    .withUsPart {
+        height: 430px;
+        margin: 40px 0;
+    }
+    .withUsPart > .container > h3 {
+        font-size: 33px;
+        line-height: 37px;
+        padding: 50px 0 30px;
+    }
+    .col-md-4 > p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    /* --  Our Business Section End  -- */
+
+    /* --  COMMENTS SECTION  -- */
+
+    .comments h3 {
+        font-size: 33px;
+        line-height: 37px;
+    }
+    .comment-card {
+        margin: 60px auto 70px;
+    }
+    .comment-card > img {
+        height: 130px;
+        width: 130px;
+        margin: -5%;
+    }
+    .comment-card > .container > h5 {
+        line-height: 24px;
+        margin: -15px 0 0;
+    }
+    .comment-card > .container > p {
+        font-size: 17px;
+        line-height: 21px;
+        margin: 30px 55px;
+    }
+    /* --  COMMENTS SECTION END  -- */
+
+    /* --  Subfooter SECTION  -- */
+    .subfooter {
+        height: 330px;
+    }
+    .subfooter > .container > h4 {
+        padding: 50px 0 20px;
+    }
+    .subfooter > .container > img {
+        padding: 0px 8.2px;
+    }
+    /* --  Subfooter SECTION End  -- */
+
+    /* --  FOOTER  -- */
+    .footer {
+        height: 310px;
+    }
+    .footer-card {
+        background: linear-gradient(94deg, #DE0654 10%, #DE0654 30%, #DE0654 60%, rgba(222, 6, 84, 0) 98%);
+        height: 310px;
+    }
+    .footer-card > .container > h3 {
+        font-size: 33px;
+        line-height: 37px;
+        margin: 30px 0 10px 3%;
+    }
+    .footer-card > .container > p {
+        width: 61%;
+        font-size: 22px;
+        line-height: 24px;
+        margin: 20px auto 20px 3%;
+    }
+    .footer-form > input[type="tel"] {
+        font-size: 16px;
+        line-height: 19px;
+        padding: 10px 15px;
+        margin: 0 -5px 15px 3%;
+    }
+    .footer-form > input[type="submit"] {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 10px 20px;
+    }
+}
+/*   NETBOOKS End  */
+
+/*   TABLETS  */
+@media only screen and (max-width: 991px) {
+    html, body {
+        overflow-x: hidden;
+    }
+        
+    .call-card {
+        width: 500px;
+    }
+    .call-card > .container > h4 {
+        font-size: 28px;
+        line-height: 28px;
+        margin: 20px auto 30px;
+    }
+    .second-h4 { /* 2nd h4 on pop-up box at skidka*/
+        margin: -20px 70px 25px!important;
+    }
+    .fa-times {
+        font-size: 35px;
+        padding: 8px 14px;
+        margin: 5px -400px -20px 0;
+    }    
+    .input-call {
+        font-size: 22px;
+        line-height: 22px;
+        padding: 24px 28px;
+    }
+    .btn-call, #skidkaPopupBtn {
+        font-size: 28px;
+        line-height: 28px;
+        padding: 23px;
+        margin: 15px auto 30px;
+    }
+
+    /*  NAVBAR */
+    #nav {
+        height: auto;
+    }
+    #logo-pic {
+        width: 200px;
+        margin: auto 10px;
+    }
+    .nav-link {
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 600;
+        text-align: center;
+    }  
+    
+    /* --  HOME SECTION  -- */
+    h1 {
+        font-size: 28px;
+        margin: 0 0 30px;
+    }
+    .home-ul {
+        font-size: 17px;
+        margin: 7px 0px 7px 20px;
+    }
+    .home-ul > li {
+        padding: 8px 0 8px 10px;
+        line-height: 24px;
+    }
+    #home-pic {
+        width: 100%;
+        margin: 8px 0 0 35px;
+    }
+    .home-card {
+        width: 40%;
+    }
+    .col-sm-9 p {
+        font-size: 15px;
+        line-height: 17px;
+        padding: 15px 30px 5px 3px;
+    }
+    .col-sm-3 img {
+        width: 65px;
+        margin: 33px auto;
+    }
+    
+    .card-line {
+        height: 48px;
+    }
+    .card-line p {
+        font-size: 13.9px;
+        line-height: 18px;
+        margin: 15px 0 15px 11px;
+    }
+
+    .business-card > .container > h4 {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0 10px 17px;
+    }
+    .business-card > .container > p {
+        text-align: center;
+        font-size: 15px;
+        line-height: 17.25px;
+        margin: 10px 0;
+    }
+
+    .comment-card > .container > h5 {
+        margin: -10px 0;
+    }
+    .comment-card > img {
+        margin: -6%;
+    }
+    .subfooter {
+        height: 400px;
+    }
+    .footer-card {
+        max-width: 88%;
+        width: 85%;
+    }
+    .footer-card > .container > p {
+        width: 62%;
+        font-size: 21px;
+    }
+
+}
+/*   TABLETS End  */
+
+/*   MOBILE  */
+@media only screen and (max-width: 767px) {
+    .col-md-4, .col-md-3, .col-md-6, .col-sm-3 {
+        max-width: 100%;
+        width: 100%;
+    }
+    .fa-times {
+        font-size: 27px;
+        padding: 5px 10px;
+        margin: 5px -90% 0px 0;
+    }
+    .call-card {
+        width: 90%;
+        height: auto;
+        border-radius: 30px;
+    }
+    .call-card > .container > h4 {
+        font-size: 22px;
+        line-height: 22px;
+        margin: 10px 5px 25px;
+    }
+    .second-h4 { /* 2nd h4 on pop-up box at skidka*/
+        margin: -20px 10px 25px!important;
+    }
+    .input-call {
+        font-size: 18px;
+        line-height: 18px;
+        padding: 18px 25px;
+    }
+    .btn-call {
+        font-size: 22px;
+        line-height: 22px;
+        padding: 18px;
+        margin: 15px auto 35px;
+    }
+    /*  NAVBAR */
+    #nav {
+        margin: 20px auto 0;
+        box-shadow: 0 0 0 0;
+    }
+    .navbar-toggler {
+        margin: 0;
+    }
+    .nav-link {
+        padding: 10px;
+    }
+
+    /* --  HOME SECTION  -- */
+    .home {
+        margin: 30px 0;
+    }    
+    h1 {
+        text-align: center;
+        font-size: 23px;
+    }
+    .home-ul {
+        font-size: 14px;
+    }
+    .home-ul > li {
+        line-height: 20px;
+        padding: 7px 0 7px 7px;
+    }
+    #homeBtn {
+        width: 97%;
+    }
+    .p-skidka {
+        font-size: 0;
+        line-height: 0;
+    }
+    #home-pic {
+        width: 100%;
+        margin: 10px auto 0 0 ;
+    }
+    .home-card {
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .col-sm-9 p {
+        font-size: 0px;
+        line-height: 0px;
+        padding: 0;
+        margin: 0;
+    }
+    .col-sm-3 img {
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .col-sm-9, .col-sm-3 {
+        float: none;
+    }
+
+    .card-line {
+        width: 100%;
+        height: 50px;
+        margin: 13px 0;
+    }
+    .card-line p {
+        font-size: 14px;
+        margin: 13px 0 13px 7px;
+    }
+    .p-price {
+        margin: 13px 7px 13px 0!important;
+    } 
+    .call-icon {
+        width: 0;
+        margin: 0;
+    }
+    /*  be with Us Part  */
+    .withUsPart {
+        width: 100%;
+        height: 1300px;
+        margin: 20px 0;
+    }
+    .withUsPart > .container > h3 {
+        font-size: 40px;
+        line-height: 46px;
+    }
+    .withUsPart > .container > .col-md-4 {
+        margin: 57px auto;
+    }
+    .col-md-4 > p {
+        font-size: 25px;
+        line-height: 29px;
+        text-align: center;
+        margin: 20px auto 0;
+    }
+    .col-md-4 {
+        max-width: 100%;
+        width: 100%;
+    }
+    /* --  COMMENTS SECTION  -- */
+    .comments { 
+        padding-bottom: 20px;
+    }
+    .comments h3 {
+        font-size: 38px;
+        line-height: 46px;
+        margin: 70px 0 30px;
+    }
+    .comment-card {
+        display: inline-block;
+        position: relative;
+        width: 90%;
+        height: auto;
+        margin: 60px 5% 70px;
+    }
+    .comment-card > img {
+        width: 140px;
+        height: 140px;
+        display: flex;
+        padding: 15px;
+        margin: -70px auto 15px;
+    }
+    .comment-card > .container > h5 {
+        font-size: 22px;
+        line-height: 25.3px;
+        margin: 0;
+    }
+    .comment-card > .container > p {
+        font-size: 15px;
+        line-height: 17.5px;
+        margin: 20px 7px;
+        padding-bottom: 20px;
+    }
+    .carousel-indicators > button[type=button] {
+        width: 40px;
+        height: 4px;
+        margin: 0 10px;
+    }
+    /* --  COMMENTS SECTION END  -- */
+
+    /* --  Subfooter SECTION  -- */
+    .subfooter {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .subfooter > .container > h4 {
+        font-size: 30px;
+        font-weight: bold;
+        padding: 70px 0 30px;
+    }
+    .subfooter > .container > img {
+        padding: 0;
+    }
+    /* --  Subfooter SECTION End  -- */
+
+    /* --  FOOTER  -- */
+    .footer {
+        height: auto;
+        background: #DE0654;
+    }
+    .footer-card {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        background: #DE0654;
+        margin: 0;
+    }
+    .footer-card > .container > h3 {
+        font-size: 40px;
+        line-height: 46px;
+        text-align: center;
+        margin: 40px auto 30px;
+    }
+    .footer-card > .container > p {
+        width: 100%;
+        margin: 0;
+        padding: 20px 5px;
+        text-align: center;
+    }
+    .footer-form > input[type="tel"] {
+        border: 1px solid #fff;
+        width: 50%;
+        margin: 20px -6px 20px 10px;
+    }
+    .footer-form > input[type="submit"] {
+        width: 40%;
+    }
+    .last-p {
+        text-align: center;
+    }
+
+    /* Mobile call card */
+    .mobile-card {
+        display: inline-block;
+        width: 150%;
+        height: 80px;
+        background: #717171;
+        margin: 30px auto 30px -25% ;
+    }
+    .mobile-card > .container > .col-sm-4 > button, 
+    .mobile-card > .container > .col-sm-4 > a > button {
+        width: 100%;
+        height: 100%;
+        font-family: 'Ubuntu', sans-serif;
+        color: #fff;
+        font-size: 14px;
+        line-height: 14px;
+        border: none;
+        background: transparent;
+        padding: 5px;
+        margin: 5.8px auto;
+        transition: .3s ease;
+    }
+    .col-sm-4 > button > img,
+    .col-sm-4 > a > button > img {
+        margin-bottom: 5px;
+    }
+    .mobile-card > .container > .col-sm-4 > button:hover,
+    .mobile-card > .container > .col-sm-4 > a > button:hover {
+        background: #8f8b8b;
+    }
+    @media only screen and (max-width: 575px) {
+        .mobile-card {
+            width: 120%;
+            margin: 15px auto 20px -4% ;
+        }
+        .col-sm-4 {
+            max-width: 30%;
+            width: 30%;
+            padding: 0 7px;
+        }
+        .mobile-card > .container {
+            max-width: 90%;
+            width: 90%;
+            margin: 0 auto 0 10px;
+        }
+        .mobile-card > .container > .col-sm-4 > button,
+        .mobile-card > .container > .col-sm-4 > a > button {
+            padding: 1px;
+            margin: 4.8px auto;
+        }
+    }
+
+
+}
+/*   MOBILE End  */
+
+/*  ---  RESPONSIVE  --- */

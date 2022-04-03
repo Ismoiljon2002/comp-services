@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> КОМПЬЮТЕРНАЯ ПОМОЩЬ </title>
+    <!--META TAGS-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--META TAGS END-->
+
+    <!--CSS FILES-->
+    <link rel="shortcut" href="./img/LOGO.png">
+    <link rel="stylesheet" href="aos/dist/aos.css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div id="card-note" class="card-note">
+        <div class="container text-center">
+            <h5 style="color: #FE4D4D;"> You did not submit your phone number! </h5>
+        </div>
+    </div>
+    
+    <div class="bg-callCard-1">
+        <div id="card1" class="call-card">            
+            <div class="container text-center">
+                <i id="exitBtn1" class="fas fa-times"></i>
+                <h4 style="color: #FE4D4D;"> 25% скидка на услугую </h4>
+                <h4 class="second-h4"> До конца акции осталось <span class="hours"> 5 </span> часов <span class="mins">
+                        10 </span> минут. </h4>
+
+                <form>
+                    <input class="input-call" type="tel" placeholder="Введите телефон">
+                    <input id="skidkaPopupBtn" type="button" value="Перезвоните мне!">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-callCard-2">
+        <div id="card2" class="call-card">
+            <div class="container text-center">
+                <i id="exitBtn2" class="fas fa-times"></i>
+                <h4>Перезвоним вам в течение <span style="color: #FE4D4D;"> 3 минут</span></h4>
+
+                <form>
+                    <input class="input-call" type="tel" placeholder="Введите телефон" required>
+                    <input id="btnCall" class="btn-call" type="button" value="Перезвоните мне!">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <nav id="nav" class="container navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" href="">
+                <img id="logo-pic" src="./img/LOGO (1).png" alt="LOGO">
+            </a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler navbarBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#price"> ЦЕНЫ </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#callMaster"> ВЫЗОВ МАСТЕРА </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#facilities"> ПРЕМУЩЕСТВА </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#workSchedule"> СХЕМА РАБОТЫ </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comments"> ОТЗЫВЫ </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-red" href="tel:+1111111111"> + 1 111 11 11 11 </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--NAVBAR END-->
+    <div class="clr"></div>
+
+    <!--  Home Section  -->
+    <section id="home" class="home">
+        <div class="container">
+            <div class="col-md-7">
+                <h1> РЕМОНТ КОМПЬЮТЕРОВ ОТ <span style="color: #DE0654"> 350₽ </span> У ВАС НА ДОМУ </h1>
+
+                <ul class="home-ul">
+                    <li> Выезд и Диагностика - БЕСПЛАТНО </li>
+                    <li> Сначала называем цену, потом ремонт </li>
+                    <li> Выезд мастера через 15 минут </li>
+                    <li> Среднее время ремонта 1,5-2 часа </li>
+                </ul>
+
+                <!-- Call Card which appears only on mobile phones  -->
+                <div id="mobCard" class="mobile-card">
+                    <div class="container d-flex">
+                        <div class="col-sm-4 text-center">
+                            <a href="tel:+1111111111">
+                                <button id="zvonok">
+                                    <img src="./img/003   Call.png" alt="">
+                                    <br> Звонок
+                                </button>
+                            </a>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <button id="zvonok_skidku">
+                                <img src="./img/Group (1).png" alt="">
+                                <br> Получить скидку
+                            </button>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <button id="obratniy_zvonok">
+                                <img src="./img/Group.png" alt="">
+                                <br> Обратный звонок
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="homeBtn" id="homeBtn">ВЫЗВАТЬ</button>
+                <p class="p-skidka">Оставить заявку на <span class="link-skidka"> скидку 25% </span> </p>
+            </div>
+            <div class="col-md-5">
+                <img data-aos="fade-left" data-aos-duration="900" id="home-pic" src="./img/master-pc2 1.png"
+                    alt="Loading...">
+
+                <div class="home-card">
+                    <div class="col-sm-3">
+                        <img src="./img/coupon 1.png" alt="Coupon">
+                    </div>
+                    <div class="col-sm-9">
+                        <p> <b>32 клиента</b> заказали услугу по акции <b>25%.</b> Период скидки ограничен. Осталось
+                            всего 6 мест, успевайте заказать.
+                            <b>Оставьте заявку</b> на получение скидки прямо сейчас.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="clr"></div>
+
+    <!--  Price Section  -->
+    <section id="price" class="price">
+        <div class="container">
+            <h3>Наши цены</h3>
+
+            <div class="col-md-6">
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Выезд мастера</p>
+                    <p class="p-price">Бесплатно</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Диагностика неисправности</p>
+                    <p class="p-price">Бесплатно</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Доставка курьером</p>
+                    <p class="p-price">Бесплатно</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Установка Windows XP/7/8/10</p>
+                    <p class="p-price">от 450 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Восстановление данных, за 1 Гб</p>
+                    <p class="p-price">от 470 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Установка драйвера</p>
+                    <p class="p-price">от 160 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Установка утилит</p>
+                    <p class="p-price">от 90 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Установка программ</p>
+                    <p class="p-price">от 320 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Чистка от залития</p>
+                    <p class="p-price">от 1790 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Замена кулера</p>
+                    <p class="p-price">от 600 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Настройка Wi-Fi роутера</p>
+                    <p class="p-price">от 430 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Замена петель</p>
+                    <p class="p-price">уточняйте</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Настройка интернета</p>
+                    <p class="p-price">от 480 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Установка антивируса</p>
+                    <p class="p-price">от 320 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Удаление вирусов</p>
+                    <p class="p-price">от 310 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Установка блока питания</p>
+                    <p class="p-price">от 200 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Установка HDD (жёсткого диска)</p>
+                    <p class="p-price">от 200 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Чистка компонентов компьютера</p>
+                    <p class="p-price">от 490 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Чистка ноутбука</p>
+                    <p class="p-price">от 490 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Замена матрицы/дисплея</p>
+                    <p class="p-price">от 570 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Замена клавиатуры</p>
+                    <p class="p-price">от 595 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Установка оперативной памяти</p>
+                    <p class="p-price">от 200 ₽</p>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" class="card-line">
+                    <p>Замена матрицы/дисплея</p>
+                    <p class="p-price">от 350 ₽</p>
+                </div>
+
+                <img class="call-icon" src="./img/Group 1264.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div class="clr"></div>
+
+    <section id="facilities" class="ourBusiness">
+        <div class="container">
+            <div class="col-md-6">
+                <div data-aos="flip-up" data-aos-duration="600" class="business-card">
+                    <div class="container text-center">
+                        <img class="truck-img" src="./img/mdi_truck-fast-outline.png" alt="Track">
+                        <h4>
+                            Выезд мастера уже через
+                            15 минут после вызова
+                        </h4>
+                        <p>Бесплатные выезд и диагностика</p>
+                        <p>Выезд во все районы города и область</p>
+                    </div>
+                </div>
+                <div data-aos="flip-right" data-aos-duration="600" class="business-card">
+                    <div class="container text-center">
+                        <img class="income-img" src="./img/income 1.png" alt="Track">
+                        <h4>Никаких дополнительных оплат</h4>
+                        <p>Запчасти без магазинной наценки</p>
+                        <p>Фиксированная стоимость ремонта согласно прайсу</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div data-aos="flip-up" data-aos-duration="600" class="business-card">
+                    <div class="container text-center">
+                        <img class="comp-img" src="./img/computer 1.png" alt="Income">
+                        <h4>Решим Вашу проблему уже сегодня</h4>
+                        <p>Бесплатные выезд и диагностика</p>
+                        <p>Решим любую проблему от установки ОС до замены материнской платы</p>
+                    </div>
+                </div>
+                <div data-aos="flip-left" data-aos-duration="600" class="business-card">
+                    <div class="container text-center">
+                        <img class="diamond-img" src="./img/diamond 1.png" alt="Diamond">
+                        <h4>За качество отвечаем!</h4>
+                        <p>Работаем с 2009 года</p>
+                        <p>Опыт мастеров - от 5 лет</p>
+                        <p>Письменная гарантия до 1 г. на услуги и З/Ч</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clr"></div>
+
+        <div id="workSchedule" class="withUsPart">
+            <div class="container">
+                <h3>С нами все просто!</h3>
+
+                <div data-aos="fade-right" data-aos-duration="700" class="col-md-4 text-center">
+                    <img src="./img/clip-1385 1.png" alt="Loading...">
+
+                    <p> Вы оставляете заявку </p>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-duration="700" class="col-md-4 text-center">
+                    <img src="./img/clip-1642 1.png" alt="Loading...">
+
+                    <p> Проводим диагностику </p>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="700" class="col-md-4 text-center">
+                    <img src="./img/clip-businessman-work 1.png" alt="Loading...">
+
+                    <p> Выполняем работу </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="clr"></div>
+
+    <section id="comments" class="comments">
+        <h3 class="text-center">Отзывы о нашей работе</h3>
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="active"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item" data-bs-interval="10000">
+                    <div class="comment-card">
+                        <img src="./img/girl-img.png" alt="">
+                        <div class="container text-center">
+                            <h5> АЛИНА АЛЕКСАНДРОВНА  </h5>
+                            <p>
+                                Делали в этой компании усиление для загородного дома Перешли на удаленку и высокая скорость инета стала актуальной сделали быстро и аккуратно довольны.
+                                Купили жилье в новостройке. Но не долго радовались. Интернет ужасный. Тут ловит, там нет. Обратились в Мосбуст. Проблему решили Все отлично. Рекомендую
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <div class="comment-card">
+                        <img src="./img/Ellipse 31.png" alt="">
+                        <div class="container text-center">
+                            <h5> ОЛЕГ КРИВОУСОВ </h5>
+                            <p>
+                                Огромное спасибо Виктору, который спас наш ноутбук от гибели, сделав всё быстро и
+                                профессионально. Теперь он работает как новый. )) Виктор приехал в оговорённое время и
+                                за минимальное время были устранены все неполадки в работе ноутбука.
+                                Всем рекомендую этого мастера. Хороший человек, с которым приятно иметь дело!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="9000">
+                    <div class="comment-card">
+                        <img src="https://www.orbitmedia.com/wp-content/uploads/2016/08/Andy-Profile-600-400x400.png" alt="">
+                        <div class="container text-center">
+                            <h5> ЕГОР ПЕТРОВ </h5>
+                            <p> 
+                                Я очень ценю то, как вы справляетесь со всеми нами, работая над этими проектами! Мне приятно знать, что я честно работаю в компании, которая готова делать что-то хорошее для своих сотрудников, а не ничего не делать. Я рад, что у них высокие стандарты для своих сотрудников. Я также хочу поблагодарить вас за вашу тяжелую работу.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="subfooter">
+        <div class="container text-center">
+            <h4>Ремонтируем все модели ПК и ноутбуков</h4>
+
+            <img src="./img/1800px_Sony_logo.png" alt="Sony">
+            <img src="./img/acer.png" alt="acer">
+            <img src="./img/apple.png" alt="apple">
+            <img src="./img/asus.png" alt="asus">
+            <img src="./img/dell.png" alt="dell">
+            <img src="./img/lg.png" alt="LG">
+            <img src="./img/hp.png" alt="hp">
+            <img src="./img/lenova.png" alt="lenova">
+            <img src="./img/samsung.png" alt="samsung">
+            <img src="./img/toshiba.png" alt="Toshiba">
+            <img src="./img/dexp.png" alt="dexp">
+        </div>
+    </section>
+
+    <footer id="callMaster" class="footer">
+        <div class="col-md-7 footer-card">
+            <div class="container">
+                <h3>Заказать выезд мастера</h3>
+
+                <p>
+                    Места куда мы обычно выезжаем:
+                    в Кафе, в Офис, в Институт,
+                    прямо Домой или на Дачу
+                </p>
+
+                <form class="footer-form">
+                    <input type="tel" placeholder="Ваш телефон" maxlength="21" minlength="7" required>
+                    <input type="submit" value="ВЫЗВАТЬ">
+                </form>
+
+                <p class="last-p">Оставляя заявку, Вы соглашаетесь на обработку персональных данных
+                </p>
+            </div>
+        </div>
+        <div class="col-md-5 footer-pic"></div>
+    </footer>
+
+    <!--IMPORTATNT JS FILES-->
+    <script src="./Bootstrap/js/bootstrap.min.js"></script>
+    <script src="./aos/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+
+    <script src="js/app.js"></script>
+    <!--IMPORTANT JS FILES END-->
+</body>
+
+</html>
